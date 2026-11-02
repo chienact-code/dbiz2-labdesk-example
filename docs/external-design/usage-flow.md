@@ -15,7 +15,7 @@
       architecture with ADR-004; row 4 (split the "Booking flow" sequence) is still open and owned
       by Owner A.
 
-## Student
+## Student: get a seat and use it
 
 ```mermaid
 flowchart LR
@@ -33,7 +33,7 @@ flowchart LR
 | 3 | UC-04 Check in at the lab | `AD-UC-04.md` | S-F02-01 |
 | (alt) | UC-02 Cancel a booking | `AD-UC-02.md` | S-F01-03 (modal "Cancel booking?") |
 
-## Lab Technician
+## Lab Technician: keep the labs usable
 
 ```mermaid
 flowchart LR
@@ -47,15 +47,25 @@ flowchart LR
 | 1 | UC-07 View lab occupancy | not needed | S-F00-01, S-F03-01 |
 | 2 | UC-06 Block a seat for maintenance | `AD-UC-06.md` | S-F03-02 (modal "Block seat") |
 
-UC-05 Release no-show seats is started by time, not by an actor, so it has no usage flow and no
-screen. Its activity diagram is `AD-UC-05.md`; the student only sees its result as an email.
+Each actor of LabDesk comes for one goal, so each has one flow. A product like a library app,
+where a reader comes either to find a book on the shelf or to write a review, would give that
+actor one flow per goal.
+
+## Use cases without a flow
+
+| Use case | Started by | Described in |
+|---|---|---|
+| UC-05 Release no-show seats | Time (15 minutes after a slot starts) | `AD-UC-05.md`; the student only sees the result as an email |
 
 ## Checks before you save
 
-- [x] One flow for every actor that starts a use case (time and external systems excluded).
+- [x] Every actor that starts a use case has at least one flow.
+- [x] An actor with clearly different goals has one flow per goal; no flow has more than about
+      9 boxes (Student 4 use cases, Lab Technician 2).
 - [x] Every actor name matches the Use Case Diagram and the Context Diagram.
-- [x] Every Must use case of W0 Table 1 appears in at least one flow, with the same ID and name
-      (UC-05 is time-triggered, see above).
+- [x] Coverage: UC-01 to UC-04 (Must) and UC-06, UC-07 (Should) each appear in a flow with the
+      same ID and name; UC-05 is listed under "Use cases without a flow"; no Won't-have use case
+      appears.
 - [x] No box is a click or a screen; no box tells two use cases.
 - [x] Every flow renders on mermaid.live.
 - [x] Every step has at least one screen, and every screen in `screen-list.md` appears in some step.
