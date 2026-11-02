@@ -24,11 +24,9 @@ docs/
   activity/           Lesson 7      activity-index.md, AD-<UC-ID>.md, review-<team>.md
   external-design/    Lesson 8      usage-flow.md, screen-list.md, screen-transition.md,
                                     ui-conventions.md, review-<team>.md
-screens/              Lesson 8      screen-spec-<Screen ID>.md
-  img/                Lesson 8      <Screen ID>.png
+    screens/          Lesson 8      screen-spec-<Screen ID>.md
+      img/            Lesson 8      <Screen ID>.png
 ```
-
-`screens/` sits outside `docs/` because DBIZ3 builds the product one screen at a time from it.
 
 ## Read it in this order
 
@@ -47,7 +45,7 @@ screens/              Lesson 8      screen-spec-<Screen ID>.md
 | 11 | L7 | [activity-index.md](docs/activity/activity-index.md), [AD-UC-01.md](docs/activity/AD-UC-01.md), [AD-UC-05.md](docs/activity/AD-UC-05.md) | Inputs check against L3-L4, then activity diagrams |
 | 12 | L8 | [usage-flow.md](docs/external-design/usage-flow.md) | One usage flow per actor, linked to activity diagrams and screens |
 | 13 | L8 | [screen-list.md](docs/external-design/screen-list.md), [screen-transition.md](docs/external-design/screen-transition.md), [ui-conventions.md](docs/external-design/ui-conventions.md) | Screens, how users move, shared conventions |
-| 14 | L8 | [screen-spec-S-F01-02.md](screens/screen-spec-S-F01-02.md) | One complete Screen Spec with its wireframe |
+| 14 | L8 | [screen-spec-S-F01-02.md](docs/external-design/screens/screen-spec-S-F01-02.md) | One complete Screen Spec with its wireframe |
 | all | all | [ai-log.md](docs/project/ai-log.md) | Where AI suggested something wrong, and what the team did |
 
 ## How the files connect
