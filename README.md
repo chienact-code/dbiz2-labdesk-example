@@ -4,8 +4,26 @@ Worked example used in DBIZ2 Digital Business Project II (VJCBI College, Foreign
 Lesson 7 (UML Activity Diagram) and Lesson 8 (External Design). It is a teaching example, not a
 real product and not a student submission.
 
-The folder layout is the one each team uses in its shared team folder in DBIZ2. In DBIZ3 the same
-folders move into the team's GitHub repository unchanged.
+## Where each lesson's work goes
+
+The folder layout is the one each team uses in its shared team folder in DBIZ2. Each lesson writes
+into its own folder, so a student knows where today's work goes and where the next lesson will
+look for it.
+
+```text
+docs/
+  activity/              Lesson 7   activity-index.md, AD-<UC-ID>.md, review-<team>.md
+  external-design/       Lesson 8   usage-flow.md, screen-list.md, screen-transition.md,
+                                    ui-conventions.md, review-<team>.md
+screens/                 Lesson 8   screen-spec-<Screen ID>.md
+  img/                   Lesson 8   <Screen ID>.png
+```
+
+Lessons 3 to 5 (Context Diagram, Use Case Diagram, Sequence Diagrams, architecture, Function List)
+stay in each team's midterm report and workbook, so they are not in this repository. In DBIZ3 the
+team folder becomes the team's GitHub repository unchanged, and DBIZ3 adds `docs/spec/` and
+`docs/env/` next to these folders. `screens/` sits outside `docs/` because DBIZ3 builds one screen
+at a time from it.
 
 ## How to read this repository
 
@@ -16,10 +34,10 @@ Read in this order. Each file links to the previous one by ID (UC, FR, AD, Scree
 | 1 | [`docs/activity/activity-index.md`](docs/activity/activity-index.md) | L7 | Inputs check against Lessons 3-4, and which use cases need an activity diagram |
 | 2 | [`docs/activity/AD-UC-01.md`](docs/activity/AD-UC-01.md) | L7 | Activity diagram of a use case started by a student |
 | 3 | [`docs/activity/AD-UC-05.md`](docs/activity/AD-UC-05.md) | L7 | Activity diagram of a use case started by time |
-| 4 | [`docs/usage-flow.md`](docs/usage-flow.md) | L8 | One usage flow per actor, each step linked to its activity diagram and screens |
-| 5 | [`docs/screen-list.md`](docs/screen-list.md) | L8 | Every screen, with states and modals kept apart |
-| 6 | [`docs/screen-transition.md`](docs/screen-transition.md) | L8 | Screen transitions per actor |
-| 7 | [`docs/ui-conventions.md`](docs/ui-conventions.md) | L8 | Conventions every screen follows |
+| 4 | [`docs/external-design/usage-flow.md`](docs/external-design/usage-flow.md) | L8 | One usage flow per actor, each step linked to its activity diagram and screens |
+| 5 | [`docs/external-design/screen-list.md`](docs/external-design/screen-list.md) | L8 | Every screen, with states and modals kept apart |
+| 6 | [`docs/external-design/screen-transition.md`](docs/external-design/screen-transition.md) | L8 | Screen transitions per actor |
+| 7 | [`docs/external-design/ui-conventions.md`](docs/external-design/ui-conventions.md) | L8 | Conventions every screen follows |
 | 8 | [`screens/screen-spec-S-F01-02.md`](screens/screen-spec-S-F01-02.md) | L8 | One complete Screen Spec, with its wireframe in `screens/img/` |
 
 Only the files above are written out. The index and the screen list also name AD-UC-02, AD-UC-04,
