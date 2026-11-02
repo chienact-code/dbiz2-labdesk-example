@@ -1,110 +1,75 @@
-# LabDesk: worked example for DBIZ2 Lessons 7 and 8
+# LabDesk: worked example of a whole DBIZ2 project
 
-Worked example used in DBIZ2 Digital Business Project II (VJCBI College, Foreign Trade University),
-Lesson 7 (UML Activity Diagram) and Lesson 8 (External Design). It is a teaching example, not a
-real product and not a student submission.
+Worked example for DBIZ2 Digital Business Project II (VJCBI College, Foreign Trade University).
+It shows one small product, LabDesk, going through every lesson of the course, from the first
+client meeting to the screens that DBIZ3 will build. It is a teaching example, not a real product
+and not a student submission.
+
+**LabDesk** is a seat reservation system for the faculty computer labs. Students book a seat before
+they come and check in with a QR code at the lab door; seats nobody uses are released after 15
+minutes; Lab Technicians block faulty seats and watch how labs are used.
 
 ## Where each lesson's work goes
 
-The folder layout is the one each team uses in its shared team folder in DBIZ2. Each lesson writes
-into its own folder, so a student knows where today's work goes and where the next lesson will
-look for it.
+Each lesson writes into its own folder, so you always know where today's work goes and where the
+next lesson will look for it.
 
 ```text
 docs/
-  activity/              Lesson 7   activity-index.md, AD-<UC-ID>.md, review-<team>.md
-  external-design/       Lesson 8   usage-flow.md, screen-list.md, screen-transition.md,
+  project/            Lessons 1-2   project-brief.md, ai-log.md
+  context/            Lesson 3      cvca.md, context-diagram.md
+  use-case/           Lesson 4      use-case-diagram.md, SD-<UC-ID>.md
+  architecture/       Lesson 4      architecture.md, adr/ADR-<nnn>-<title>.md
+  function-list/      Lessons 5-6   w0-scope.md ... w6-cash-flow.md
+  activity/           Lesson 7      activity-index.md, AD-<UC-ID>.md, review-<team>.md
+  external-design/    Lesson 8      usage-flow.md, screen-list.md, screen-transition.md,
                                     ui-conventions.md, review-<team>.md
-screens/                 Lesson 8   screen-spec-<Screen ID>.md
-  img/                   Lesson 8   <Screen ID>.png
+screens/              Lesson 8      screen-spec-<Screen ID>.md
+  img/                Lesson 8      <Screen ID>.png
 ```
 
-Lessons 3 to 5 (Context Diagram, Use Case Diagram, Sequence Diagrams, architecture, Function List)
-stay in each team's midterm report and workbook, so they are not in this repository. In DBIZ3 the
-team folder becomes the team's GitHub repository unchanged, and DBIZ3 adds `docs/spec/` and
-`docs/env/` next to these folders. `screens/` sits outside `docs/` because DBIZ3 builds one screen
-at a time from it.
+`screens/` sits outside `docs/` because DBIZ3 builds the product one screen at a time from it.
 
-## How to read this repository
+## Read it in this order
 
-Read in this order. Each file links to the previous one by ID (UC, FR, AD, Screen ID).
-
-| Step | File | Lesson | What it shows |
+| Step | Lesson | File | What it shows |
 |---|---|---|---|
-| 1 | [`docs/activity/activity-index.md`](docs/activity/activity-index.md) | L7 | Inputs check against Lessons 3-4, and which use cases need an activity diagram |
-| 2 | [`docs/activity/AD-UC-01.md`](docs/activity/AD-UC-01.md) | L7 | Activity diagram of a use case started by a student |
-| 3 | [`docs/activity/AD-UC-05.md`](docs/activity/AD-UC-05.md) | L7 | Activity diagram of a use case started by time |
-| 4 | [`docs/external-design/usage-flow.md`](docs/external-design/usage-flow.md) | L8 | One usage flow per actor, each step linked to its activity diagram and screens |
-| 5 | [`docs/external-design/screen-list.md`](docs/external-design/screen-list.md) | L8 | Every screen, with states and modals kept apart |
-| 6 | [`docs/external-design/screen-transition.md`](docs/external-design/screen-transition.md) | L8 | Screen transitions per actor |
-| 7 | [`docs/external-design/ui-conventions.md`](docs/external-design/ui-conventions.md) | L8 | Conventions every screen follows |
-| 8 | [`screens/screen-spec-S-F01-02.md`](screens/screen-spec-S-F01-02.md) | L8 | One complete Screen Spec, with its wireframe in `screens/img/` |
+| 1 | L1-L2 | [project-brief.md](docs/project/project-brief.md) | Client, problem, goal, team roles, milestones |
+| 2 | L3 | [cvca.md](docs/context/cvca.md) | Stakeholders, money and information flows, problems, stakeholder requirements |
+| 3 | L3 | [context-diagram.md](docs/context/context-diagram.md) | LabDesk as a black box and the entities around it |
+| 4 | L4 | [use-case-diagram.md](docs/use-case/use-case-diagram.md) | Who wants LabDesk to do what; list of sequence diagrams |
+| 5 | L4 | [SD-UC-01.md](docs/use-case/SD-UC-01.md), [SD-UC-04.md](docs/use-case/SD-UC-04.md) | How the parts of LabDesk talk for one use case |
+| 6 | L4 | [architecture.md](docs/architecture/architecture.md) and [adr/](docs/architecture/adr/) | System requirements, functional and physical design, three layers, decisions |
+| 7 | L5 | [w0-scope.md](docs/function-list/w0-scope.md) | Use case inventory, features, Won't-have, data, business rules |
+| 8 | L5 | [w1-function-list.md](docs/function-list/w1-function-list.md) | Every function with its EARS criterion, split into work items |
+| 9 | L5 | [w2-cost.md](docs/function-list/w2-cost.md), [w4-priorities.md](docs/function-list/w4-priorities.md), [w5-handover.md](docs/function-list/w5-handover.md) | Cost, priorities, threshold checks, three scenarios |
+| 10 | L6 | [w6-cash-flow.md](docs/function-list/w6-cash-flow.md) | Cash flow, NPV, IRR, payback for the three scenarios |
+| 11 | L7 | [activity-index.md](docs/activity/activity-index.md), [AD-UC-01.md](docs/activity/AD-UC-01.md), [AD-UC-05.md](docs/activity/AD-UC-05.md) | Inputs check against L3-L4, then activity diagrams |
+| 12 | L8 | [usage-flow.md](docs/external-design/usage-flow.md) | One usage flow per actor, linked to activity diagrams and screens |
+| 13 | L8 | [screen-list.md](docs/external-design/screen-list.md), [screen-transition.md](docs/external-design/screen-transition.md), [ui-conventions.md](docs/external-design/ui-conventions.md) | Screens, how users move, shared conventions |
+| 14 | L8 | [screen-spec-S-F01-02.md](screens/screen-spec-S-F01-02.md) | One complete Screen Spec with its wireframe |
+| all | all | [ai-log.md](docs/project/ai-log.md) | Where AI suggested something wrong, and what the team did |
 
-Only the files above are written out. The index and the screen list also name AD-UC-02, AD-UC-04,
-AD-UC-06 and the other Screen Specs: they are left for students to write as practice.
+## How the files connect
 
-Diagrams are Mermaid code blocks. The activity diagrams use `swimlane-beta`, which needs Mermaid
-11.16 or later; if a diagram does not render in your viewer, paste the block into
-[mermaid.live](https://mermaid.live).
+Every file refers to the others by ID, never by retelling them:
 
+- `StR-xx` stakeholder requirements (CVCA) become `SyR-xx` system requirements (architecture).
+- `UC-xx` use cases (W0 Table 1) are grouped into `F-xx` features (W0 Table 2).
+- `FR-xx-yy` functions (W1) carry the EARS criterion; `BR-xx` business rules are in W0.
+- `AD-UC-xx` activity diagrams cite FRs on every system action.
+- `S-Fxx-nn` screens cite their use cases and FRs, and appear in the usage flow.
 
-LabDesk is a small computer-lab seat reservation system for a university faculty. It is the
-running example in the DBIZ2 Function List workbook (Lesson 5 workshop) and is reused in
-Lessons 7 and 8 so that students see one product move from function list to activity diagrams to
-screens. It is a teaching example, not a real product and not a student submission.
+Some files show the project mid-course on purpose. For example, row 4 of the Lesson 7 Inputs check
+is still open, so SD-UC-02 is not drawn yet. Only AD-UC-01, AD-UC-05 and one Screen Spec are
+written out; the index and the screen list name the others, which are left for practice.
 
-## Actors and external systems
+## Notes on the notation
 
-| Name | Kind | Notes |
-|---|---|---|
-| Student | Primary actor | Books, cancels and checks in |
-| Lab Technician | Primary actor | Blocks seats, watches occupancy |
-| Email service | External system | Sends confirmations and notices |
-| Time | Trigger | Starts system-initiated activities (no-show release) |
-
-## Features and use cases
-
-| Feature | Name | Use cases |
-|---|---|---|
-| F-01 | Seat Booking | UC-01 Reserve a seat · UC-02 Cancel a booking · UC-03 View my bookings |
-| F-02 | Check-in and No-show | UC-04 Check in at the lab · UC-05 Release no-show seats |
-| F-03 | Lab Operations | UC-06 Block a seat for maintenance · UC-07 View lab occupancy |
-
-## Functional requirements used in the examples (EARS)
-
-| FR | Requirement |
-|---|---|
-| FR-01-01 | WHEN a student opens the booking page, the system SHALL display the labs and time slots of the next 7 days with the number of free seats in each. |
-| FR-01-02 | WHEN a student selects a slot, the system SHALL display the seat map of that lab with each seat shown as free, booked or blocked. |
-| FR-01-03 | WHEN a student confirms a free seat, the system SHALL save a booking for that student, slot and seat with status Confirmed. |
-| FR-01-04 | IF the seat a student confirms was booked by someone else after the seat map was loaded, THEN the system SHALL reject the booking and reload the seat map with a message. |
-| FR-01-05 | IF a student who already holds a booking in a slot confirms another seat in the same slot, THEN the system SHALL reject the booking and show the existing one. |
-| FR-01-06 | WHEN a booking is confirmed, the system SHALL send the student a confirmation email that contains a check-in QR code. |
-| FR-01-07 | WHEN a student cancels a Confirmed booking before its slot starts, the system SHALL set the booking to Cancelled and free the seat. |
-| FR-02-01 | WHEN a student opens the check-in link of a lab between the start of a slot and 15 minutes after it, while holding a Confirmed booking for that lab and slot, the system SHALL set the booking to Checked-in. |
-| FR-02-02 | IF a student opens the check-in link without a Confirmed booking for that lab and slot, THEN the system SHALL show why check-in failed and list the student's bookings for today. |
-| FR-02-03 | IF a student opens the check-in link more than 15 minutes after the slot started, THEN the system SHALL refuse the check-in and say that the seat was released. |
-| FR-02-04 | WHEN 15 minutes have passed since a slot started, the system SHALL set every booking of that slot that is still Confirmed to No-show and free its seat. |
-| FR-02-05 | WHEN a booking becomes No-show, the system SHALL send the student a no-show notice. |
-| FR-02-06 | IF a student reaches 3 no-shows within 30 days, THEN the system SHALL suspend the student's booking rights for 7 days. |
-
-## Business rules
-
-| BR | Rule |
-|---|---|
-| BR-01 | A student holds at most one booking per time slot. |
-| BR-02 | Booking for a slot closes when the slot starts. |
-| BR-03 | A blocked seat cannot be booked. |
-| BR-04 | Three no-shows within 30 days suspend booking rights for 7 days. |
-
-## Screens (Lesson 8)
-
-| Screen ID | Name | Actor |
-|---|---|---|
-| S-F00-01 | Sign in | All |
-| S-F01-01 | Slot picker | Student |
-| S-F01-02 | Seat map | Student |
-| S-F01-03 | My bookings | Student |
-| S-F02-01 | Check-in result | Student |
-| S-F03-01 | Lab occupancy | Lab Technician |
-| S-F03-02 | Seat maintenance | Lab Technician |
+- Diagrams are Mermaid code blocks. The activity diagrams use `swimlane-beta`, which needs Mermaid
+  11.16 or later; if a diagram does not render in your viewer, paste the block into
+  [mermaid.live](https://mermaid.live).
+- Mermaid has no use case diagram type; the Use Case Diagram is drawn as a flowchart. In a drawing
+  tool, use the UML notation.
+- Money is in VND. Rates, AI leverage factors and thresholds are the class Parameters of the
+  Lesson 5 workbook; the benefit figures in W6 are team estimates for teaching.
