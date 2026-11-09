@@ -10,7 +10,9 @@
 | Priority | Must |
 | Feature | F-01 Seat Booking |
 | Activity diagrams | AD-UC-01 (actions "Choose a seat", "Confirm the seat", "See booking confirmed") |
-| Mockup image | `img/S-F01-02.png` |
+| Mockup images | `img/S-F01-02.png` (default), `img/S-F01-02-numbered.png`, four state images (section 2) |
+| Frame width | 360px (exported at 3x, 1080 pixels) |
+| Figma frame | not used (drawn as an HTML wireframe) |
 | Status | Reviewed |
 
 ## 1. Purpose
@@ -23,6 +25,24 @@ or "Book another seat"), or the student goes back to change the slot.
 ## 2. Mockup
 
 ![S-F01-02](img/S-F01-02.png)
+
+**Numbered:** each number is the # of the element inventory in section 3. Element 10 (Message
+area) appears only in the error state, so it is numbered on the error image.
+
+| Default, numbered | Error, numbered |
+|---|---|
+| ![S-F01-02 numbered](img/S-F01-02-numbered.png) | ![S-F01-02 error numbered](img/S-F01-02-error-numbered.png) |
+
+| State | Image |
+|---|---|
+| Default | `img/S-F01-02.png` |
+| Empty | `img/S-F01-02-empty.png` |
+| Loading | `img/S-F01-02-loading.png` |
+| Error | `img/S-F01-02-error.png` (seat taken, FR-01-04; the other two errors are described in section 4 only) |
+| Success | `img/S-F01-02-success.png` |
+
+All colours, fonts and corners come from the design tokens in
+[ui-conventions.md](../ui-conventions.md#6-design-tokens).
 
 ## 3. Element inventory
 
@@ -96,8 +116,10 @@ or "Book another seat"), or the student goes back to change the slot.
 
 ## Completion checklist
 
-- [x] The mockup is a separate cropped image file, named with the Screen ID.
+- [x] The mockup is a separate cropped image file, named with the Screen ID, at the frame width.
+- [x] The numbered image exists, and its numbers match the # column of the element inventory.
 - [x] Every visible element in the mockup appears in the element inventory.
+- [x] Every colour in the mockup is a design token from ui-conventions.md.
 - [x] Every input element has a validation rule or an explicit "none".
 - [x] All five states are filled in.
 - [x] Every navigation target is a Screen ID that exists in the Screen List.

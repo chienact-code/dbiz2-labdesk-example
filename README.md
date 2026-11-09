@@ -25,7 +25,7 @@ docs/
   external-design/    Lesson 8      usage-flow.md, screen-list.md, screen-transition.md,
                                     ui-conventions.md, review-<team>.md
     screens/          Lesson 8      screen-spec-<Screen ID>.md
-      img/            Lesson 8      <Screen ID>.png
+      img/            Lesson 8      <Screen ID>.png, <Screen ID>-numbered.png, one image per state
 ```
 
 ## Read it in this order
@@ -45,7 +45,7 @@ docs/
 | 11 | L7 | [activity-index.md](docs/activity/activity-index.md), [AD-UC-01.md](docs/activity/AD-UC-01.md), [AD-UC-05.md](docs/activity/AD-UC-05.md) | Inputs check against L3-L4, then activity diagrams |
 | 12 | L8 | [usage-flow.md](docs/external-design/usage-flow.md) | One usage flow per actor, linked to activity diagrams and screens |
 | 13 | L8 | [screen-list.md](docs/external-design/screen-list.md), [screen-transition.md](docs/external-design/screen-transition.md), [ui-conventions.md](docs/external-design/ui-conventions.md) | Screens, how users move, shared conventions |
-| 14 | L8 | [screen-spec-S-F01-02.md](docs/external-design/screens/screen-spec-S-F01-02.md) | One complete Screen Spec with its wireframe |
+| 14 | L8 | [screen-spec-S-F01-02.md](docs/external-design/screens/screen-spec-S-F01-02.md) | One complete Screen Spec: wireframe per state, numbered image, design tokens |
 | all | all | [ai-log.md](docs/project/ai-log.md) | Where AI suggested something wrong, and what the team did |
 
 ## How the files connect
